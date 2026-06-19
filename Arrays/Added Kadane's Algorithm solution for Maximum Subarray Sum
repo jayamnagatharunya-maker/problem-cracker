@@ -1,0 +1,8 @@
+class Solution:
+    def maxSubarraySum(self, arr):
+        currsum =arr[0]
+        maxsum = arr[0]
+        for i in range(1,len(arr)):
+            currsum=max(currsum +arr[i],arr[i])
+            maxsum=max(maxsum,currsum)
+        return maxsum
